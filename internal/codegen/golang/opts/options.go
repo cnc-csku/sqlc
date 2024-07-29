@@ -6,7 +6,7 @@ import (
 	"maps"
 	"path/filepath"
 
-	"github.com/sqlc-dev/sqlc/internal/plugin"
+	"github.com/cnc-csku/sqlc/internal/plugin"
 )
 
 type Options struct {
@@ -44,6 +44,8 @@ type Options struct {
 	OmitUnusedStructs           bool              `json:"omit_unused_structs,omitempty" yaml:"omit_unused_structs"`
 	BuildTags                   string            `json:"build_tags,omitempty" yaml:"build_tags"`
 	Initialisms                 *[]string         `json:"initialisms,omitempty" yaml:"initialisms"`
+	ModelPackage                string            `json:"model_package,omitempty" yaml:"model_package"`
+	ModelLocation               string            `json:"model_location,omitempty" yaml:"model_location"`
 
 	InitialismsMap map[string]struct{} `json:"-" yaml:"-"`
 }

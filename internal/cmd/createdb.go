@@ -6,12 +6,12 @@ import (
 	"os"
 	"runtime/trace"
 
+	"github.com/cnc-csku/sqlc/internal/config"
+	"github.com/cnc-csku/sqlc/internal/migrations"
+	"github.com/cnc-csku/sqlc/internal/quickdb"
+	pb "github.com/cnc-csku/sqlc/internal/quickdb/v1"
+	"github.com/cnc-csku/sqlc/internal/sql/sqlpath"
 	"github.com/spf13/cobra"
-	"github.com/sqlc-dev/sqlc/internal/config"
-	"github.com/sqlc-dev/sqlc/internal/migrations"
-	"github.com/sqlc-dev/sqlc/internal/quickdb"
-	pb "github.com/sqlc-dev/sqlc/internal/quickdb/v1"
-	"github.com/sqlc-dev/sqlc/internal/sql/sqlpath"
 )
 
 var createDBCmd = &cobra.Command{
